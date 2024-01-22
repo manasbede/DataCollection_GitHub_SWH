@@ -40,3 +40,9 @@ GitHub|5000|14877|20|250|59.508|2|29.754|31
 
 ## Project Execution
 `python3 main.py`
+
+## Current Development Phase :
+Phase4: 
+1. Extracting KeyWords from the YAML files
+2. Overlapping KeyWords with most common keywords of different devops development platforms
+3. Finding potential pipelines according to category

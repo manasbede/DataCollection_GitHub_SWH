@@ -1,0 +1,186 @@
+pipeline
+A pipeline is one or more stages that describe a CI/CD process. The pipeline definition contains the documentation for root level properties like name.
+
+extends
+Extends a pipeline using a template.
+
+jobs
+Specifies the jobs that make up the work of a stage.
+
+jobs.deployment
+A deployment job is a special type of job. It's a collection of steps to run sequentially against the environment.
+
+jobs.deployment.environment
+Target environment name and optionally a resource name to record the deployment history; format: environment-name.resource-name.
+
+jobs.deployment.strategy
+Execution strategy for this deployment.
+
+jobs.deployment.strategy.canary
+Canary Deployment strategy.
+
+jobs.deployment.strategy.rolling
+Rolling Deployment strategy.
+
+jobs.deployment.strategy.runOnce
+RunOnce Deployment strategy.
+
+jobs.job
+A job is a collection of steps run by an agent or on a server.
+
+jobs.job.container
+Container resource name.
+
+jobs.job.strategy
+Execution strategy for this job.
+
+jobs.job.uses
+Any resources required by this job that are not already referenced.
+
+jobs.template
+A set of jobs defined in a template.
+
+parameters
+Specifies the runtime parameters passed to a pipeline.
+
+parameters.parameter
+Pipeline template parameters.
+
+pool
+Which pool to use for a job of the pipeline.
+
+pool.demands
+Demands (for a private pool).
+
+pr
+Pull request trigger.
+
+resources
+Resources specifies builds, repositories, pipelines, and other resources used by the pipeline.
+
+resources.builds
+List of build resources referenced by the pipeline.
+
+resources.builds.build
+A build resource used to reference artifacts from a run.
+
+resources.containers
+List of container images.
+
+resources.containers.container
+A container resource used to reference a container image.
+
+resources.containers.container.trigger
+Specify none to disable, true to trigger on all image tags, or use the full syntax as described in the following examples.
+
+resources.packages
+List of package resources.
+
+resources.packages.package
+A package resource used to reference a NuGet or npm GitHub package.
+
+resources.pipelines
+List of pipeline resources.
+
+resources.pipelines.pipeline
+A pipeline resource.
+
+resources.pipelines.pipeline.trigger
+Specify none to disable, true to include all branches, or use the full syntax as described in the following examples.
+
+resources.pipelines.pipeline.trigger.branches
+Branches to include or exclude for triggering a run.
+
+resources.repositories
+List of repository resources.
+
+resources.repositories.repository
+A repository resource is used to reference an additional repository in your pipeline.
+
+resources.webhooks
+List of webhooks.
+
+resources.webhooks.webhook
+A webhook resource enables you to integrate your pipeline with an external service to automate the workflow.
+
+resources.webhooks.webhook.filters
+List of trigger filters.
+
+resources.webhooks.webhook.filters.filter
+Webhook resource trigger filter.
+
+schedules
+The schedules list specifies the scheduled triggers for the pipeline.
+
+schedules.cron
+A scheduled trigger specifies a schedule on which branches are built.
+
+stages
+Stages are a collection of related jobs.
+
+stages.stage
+A stage is a collection of related jobs.
+
+stages.template
+You can define a set of stages in one file and use it multiple times in other files.
+
+steps
+Steps are a linear sequence of operations that make up a job.
+
+steps.bash
+Runs a script in Bash on Windows, macOS, and Linux.
+
+steps.checkout
+Configure how the pipeline checks out source code.
+
+steps.download
+Downloads artifacts associated with the current run or from another Azure Pipeline that is associated as a pipeline resource.
+
+steps.downloadBuild
+Downloads build artifacts.
+
+steps.getPackage
+Downloads a package from a package management feed in Azure Artifacts or Azure DevOps Server.
+
+steps.powershell
+Runs a script using either Windows PowerShell (on Windows) or pwsh (Linux and macOS).
+
+steps.publish
+Publishes (uploads) a file or folder as a pipeline artifact that other jobs and pipelines can consume.
+
+steps.pwsh
+Runs a script in PowerShell Core on Windows, macOS, and Linux.
+
+steps.reviewApp
+Downloads creates a resource dynamically under a deploy phase provider.
+
+steps.script
+Runs a script using cmd.exe on Windows and Bash on other platforms.
+
+steps.task
+Runs a task.
+
+steps.template
+Define a set of steps in one file and use it multiple times in another file.
+
+target
+Tasks run in an execution context, which is either the agent host or a container.
+
+target.settableVariables
+Restrictions on which variables that can be set.
+
+trigger
+Continuous integration (push) trigger.
+
+variables
+Define variables using name/value pairs.
+
+variables.group
+Reference variables from a variable group.
+
+variables.name
+Define variables using name and full syntax.
+
+variables.template
+Define variables in a template.
+dummy
